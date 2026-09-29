@@ -1,13 +1,39 @@
 # Medicine Help Portal
 
-## Run locally
+## About the Project
 
-Install dependencies in the root, backend, and frontend directories, then run `npm run dev` from the project root. The frontend uses Vite; the API and MongoDB default to `http://localhost:5000` and `mongodb://127.0.0.1:27017/medicineHelpPortal`.
+Medicine Help Portal is a healthcare assistance project designed to help patients manage their medicines, reminders, patient information, and emergency assistance.
 
-Accounts can be registered with a phone number from the portal. Ten-digit Indian mobile numbers and international numbers with a country code are supported. Each account has its own medicines, patient profile, and medical reports. Passwords are stored as bcrypt hashes and login sessions use HTTP-only cookies.
+## Technology Stack
 
-## Production configuration
+- React.js
+- JavaScript
+- CSS
+- Node.js
+- Express.js
+- MongoDB
+- Mongoose
+- Vite
 
-Set `MONGODB_URI`, a unique random `JWT_SECRET` (at least 32 random bytes), and comma-separated `FRONTEND_ORIGINS` in the backend environment. Production startup intentionally fails if `JWT_SECRET` is missing. Never commit `.env` files. See `backend/.env.example` for variable names.
+## Main Features
 
-Medical report uploads accept PDF, JPEG, and PNG files up to 10 MB and are stored in MongoDB under the owning account. Existing medicines or patient records without an account owner are not exposed to registered accounts; assign them to an account only after confirming their owner.
+- Patient Profile
+- Add Medicine
+- Edit Medicine
+- Delete Medicine
+- Medicine Reminders
+- Browser Notifications
+- Medicine Taken/Skip Status
+- Emergency Help Portal
+- Emergency Services Call
+- Patient Contact Call
+
+## Run Locally
+
+### Backend
+
+Open a terminal and run:
+
+```bash
+cd backend
+node server.js
